@@ -1,4 +1,4 @@
-package sandbox.exercises
+package sandbox.exercises.Typeclasses
 
 import cats._
 import cats.implicits._

@@ -1,7 +1,7 @@
 package sandbox
 
-import sandbox.exercises.PrintableInstances._
-import sandbox.exercises.PrintableSyntax._
+import sandbox.exercises.Typeclasses.PrintableInstances._
+import sandbox.exercises.Typeclasses.PrintableSyntax._
 import sandbox.utils.Cat
 
 object Main extends App {

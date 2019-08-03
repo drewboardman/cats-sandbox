@@ -8,3 +8,17 @@
     
 * `implicitly`
     - scala provides a typeclass interface for you to use
+
+2.3
+---
+* Semigroups are Monoids for datatypes that don't have `empty` elements.
+
+```scala
+trait Semigroup[A] {
+def combine(x: A, y: A): A
+}
+
+trait Monoid[A] extends Semigroup[A] {
+def empty: A
+}
+```
