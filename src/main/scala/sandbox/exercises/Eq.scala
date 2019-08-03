@@ -2,7 +2,7 @@ package sandbox.exercises
 
 import cats._
 import cats.implicits._
-import sandbox.utils.Models.Cat
+import sandbox.utils.Cat
 
 object EqInstances {
   implicit val catEq: Eq[Cat] = Eq.instance[Cat] { (cat1: Cat, cat2: Cat) =>

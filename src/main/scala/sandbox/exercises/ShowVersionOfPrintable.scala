@@ -1,7 +1,7 @@
 package sandbox.exercises
 
 import cats.Show
-import sandbox.utils.Models.Dog
+import sandbox.utils.Dog
 
 object ShowInstances {
   implicit val dogShow: Show[Dog] =

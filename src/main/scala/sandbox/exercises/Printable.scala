@@ -1,6 +1,7 @@
 package sandbox.exercises
 
-import sandbox.utils.Models.Cat
+import sandbox.utils.Cat
+
 
 trait Printable[A] {
   def toS(x: A): String
