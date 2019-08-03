@@ -1,8 +1,10 @@
 package sandbox
 
-import cats.instances.string._
-import cats.syntax.semigroup._
+import sandbox.exercises.PrintableInstances._
+import sandbox.exercises.PrintableSyntax._
+import sandbox.utils.Models.Cat
 
 object Main extends App {
-  println("Hello " |+| "Cats!")
+  val cat = Cat("drew", 31, "white")
+  cat.print
 }

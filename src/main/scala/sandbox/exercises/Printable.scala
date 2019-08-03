@@ -1,5 +1,7 @@
 package sandbox.exercises
 
+import sandbox.utils.Models.Cat
+
 trait Printable[A] {
   def toS(x: A): String
 }
@@ -19,10 +21,15 @@ object PrintableInstances {
     def toS(int: Int): String = int.toString
   }
 
-  implicit val PrintableCate: Printable[Cat] = new Printable[Cat] {
+  implicit val PrintableCat: Printable[Cat] = new Printable[Cat] {
     override def toS(x: Cat): String =
       s"${x.name} is a ${x.age.toString} year-old ${x.color} cat."
   }
 }
 
-final case class Cat(name: String, age: Int, color: String)
+object PrintableSyntax {
+  implicit class PrintableOps[A](val a: A) {
+    def format(implicit printable: Printable[A]): String = Printable.format(a)
+    def print(implicit printable: Printable[A]): Unit = Printable.print(a)
+  }
+}
