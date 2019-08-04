@@ -22,3 +22,16 @@ trait Monoid[A] extends Semigroup[A] {
 def empty: A
 }
 ```
+
+B.3
+-----
+* *Context-Bound Syntax*
+  - this makes the implicit typeclass declaration easier to read
+
+```
+def add[A](items: List[A])(implicit monoid: Monoid[A]): A =
+items.foldLeft(monoid.empty)(_ |+| _)
+
+def add[A: Monoid](items: List[A]): A =
+items.foldLeft(Monoid[A].empty)(_ |+| _)
+```
