@@ -26,7 +26,7 @@ def empty: A
 B.3
 -----
 * *Context-Bound Syntax*
-  - this makes the implicit typeclass declaration easier to read
+  - This makes the implicit typeclass declaration easier to read
 
 ```
 def add[A](items: List[A])(implicit monoid: Monoid[A]): A =
