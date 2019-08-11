@@ -1,10 +1,8 @@
 package sandbox.exercises.MonoidAndSemiGroup
 
-import sandbox.utils._
 import cats.Monoid
 import cats.implicits._
-import cats.instances.int._ // for monoid
-import cats.instances.option._ // for monoid
+import sandbox.utils._ // for monoid
 
 object SuperAdder {
   implicit val orderInstance: Monoid[Order] = new Monoid[Order] {
