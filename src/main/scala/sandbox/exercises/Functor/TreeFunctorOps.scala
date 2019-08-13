@@ -14,6 +14,6 @@ object TreeFunctorOps {
 
 object TreeSyntax {
   implicit class RichTreeFunctor[A](t: Tree[A]) {
-    def map[A, B](func: A => B)(implicit instance: Functor[Tree]): Tree[B] = instance.map(t)(func)
+    def map[B](func: A => B)(implicit instance: Functor[Tree]): Tree[B] = instance.map(t)(func)
   }
 }
